@@ -103,18 +103,20 @@ header .top-icons a.logo:hover {
     position: relative;
     overflow: hidden;
     text-align: center;
+    z-index: 1;
 }
 
+/* Make sure the text has good contrast against the background */
 .hero h1 {
     font-size: 4rem;
     margin-top: 4cm;
     margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    color: #fff; /* Ensure the text is white */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Stronger shadow for visibility */
     font-weight: 700;
     line-height: 1.2;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
     animation: fadeInUp 2s ease-out forwards;
 }
 
@@ -123,8 +125,8 @@ header .top-icons a.logo:hover {
     color: #fff;
     max-width: 800px;
     margin-bottom: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
     animation: fadeInUp 2s 0.5s ease-out forwards;
 }
 
@@ -137,13 +139,25 @@ header .top-icons a.logo:hover {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: translateY(0);
     animation: fadeInUp 2s 1s ease-out forwards;
 }
 
 .btn-primary:hover {
     background-color: #444;
+}
+
+/* FadeInUp Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Features Section */
@@ -159,56 +173,73 @@ header .top-icons a.logo:hover {
     margin-top: -2rem;
 }
 
-.features h2 {
+.features h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
 }
 
+.features-description {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Grid for feature items */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem;
 }
 
-.feature {
+/* Feature Item */
+.feature-item {
     background-color: #444;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-align: left;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.9); /* Initially scaled down */
+    animation: popUp 1s ease-out forwards; /* Fade-in animation */
     transition: transform 0.3s, box-shadow 0.3s ease;
-    opacity: 0;
-    transform: scale(0.9);
-    animation: popUp 1s ease-out forwards;
 }
 
-.feature:hover {
+/* Hover effect */
+.feature-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-.feature.visible {
+/* Make the item visible after the animation */
+.feature-item.visible {
     opacity: 1;
     transform: scale(1);
 }
 
-.feature h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #fff;
+/* Pop-up animation */
+@keyframes popUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.feature p {
-    color: #ccc;
-    font-size: 1rem;
-}
 
+/* Footer Styles */
 /* Footer Styles */
 footer {
     background-color: #111;
@@ -217,16 +248,120 @@ footer {
     text-align: center;
     font-size: 1rem;
     border-top: 2px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align text and image side by side */
+    flex-wrap: wrap;
 }
 
-footer .footer-logo {
+/* Footer Logo */
+.footer-logo {
     font-size: 2rem;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 0; /* Remove bottom margin */
 }
+
+/* If you have an image for the footer */
+.footer-logo img {
+    max-width: 100px; /* Adjust the width of the logo image */
+    height: auto;
+}
+
+/* Footer Description */
+.footer-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 2rem;
+}
+
+/* Footer Social Media Links */
+/* Footer Styles */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 3rem 2rem;
+    font-size: 1rem;
+    border-top: 2px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap;
+}
+
+/* Footer Logo (Left side) */
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 2rem; /* Space between image and text */
+}
+
+/* Footer Logo Image */
+.footer-logo img {
+    max-width: 100px; /* Adjust the width of the logo image */
+    height: auto;
+    margin-right: 2rem;
+}
+
+/* Footer Description (Middle text) */
+.footer-description {
+    font-size: 1rem;
+    color: #ccc;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+/* Footer Social Links (Right side) */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto; /* Push to the right */
+    text-align: right;
+}
+
+.footer-social p {
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+/* Footer Social Links (Icons) */
+.footer-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-links a {
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-social-links a:hover {
+    color: #ccc;
+}
+
+/* Footer Bottom Text */
+footer p {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+}
+
+
 
 /* Community Section */
 .community {
@@ -354,5 +489,32 @@ footer .footer-logo {
     font-weight: bold;
     z-index: 9999;
     display: block;
+}
+
+/*effects*/
+.community-description {
+    font-size: 1.4rem;
+    color: #fff;
+    max-width: 800px;
+    margin-bottom: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff; /* Creates the cursor effect */
+    animation: typing 12s steps(170) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 

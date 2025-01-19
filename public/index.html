@@ -102,6 +102,31 @@
             background-color: #222;
             transform: scale(1);
         }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
     </style>
 </head>
 <body>
@@ -154,44 +179,37 @@
         <div class="content">
             <h2>Join Our Community</h2>
             <p>Collaborate, share tips, and get support on our official Discord server.</p>
+            <a href="https://discord.gg/KhcfuTtGBd">
             <button class="btn-secondary">Join Discord</button>
+        </a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
-            </div>
-            <div class="footer-description">
-                <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
-            </div>
-            <div class="footer-social">
-                <p>Follow Us:</p>
-                <div class="footer-social-links">
-                    <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
-                    <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
-                    <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
-                </div>
+        <!-- Left Side: Logo -->
+        <div class="footer-logo">
+            <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
+        </div>
+    
+        <!-- Center: Description Text -->
+        <div class="footer-description">
+            <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
+        </div>
+    
+        <!-- Right Side: Follow Us -->
+        <div class="footer-social">
+            <p>Follow Us:</p>
+            <div class="footer-social-links">
+                <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
             </div>
         </div>
+    
+        <!-- Footer Bottom Text -->
         <p>&copy; 2025 FinAI. All rights reserved.</p>
     </footer>
+    
 
-    <script>
-        const offerItems = document.querySelectorAll('.feature');
-
-        function checkVisibility() {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            offerItems.forEach(item => {
-                if (scrollPosition > item.offsetTop + item.offsetHeight / 2) {
-                    item.classList.add('visible');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
-    </script>
 </body>
 </html>

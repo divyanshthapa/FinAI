@@ -40,39 +40,46 @@
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
-            </div>
-            <div class="footer-description">
-                <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
-            </div>
-            <div class="footer-social">
-                <p>Follow Us:</p>
-                <div class="footer-social-links">
-                    <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
-                    <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
-                    <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
-                </div>
+        <!-- Left Side: Logo -->
+        <div class="footer-logo">
+            <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
+        </div>
+    
+        <!-- Center: Description Text -->
+        <div class="footer-description">
+            <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
+        </div>
+    
+        <!-- Right Side: Follow Us -->
+        <div class="footer-social">
+            <p>Follow Us:</p>
+            <div class="footer-social-links">
+                <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
+                <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
             </div>
         </div>
+    
+        <!-- Footer Bottom Text -->
         <p>&copy; 2025 FinAI. All rights reserved.</p>
     </footer>
+    
 
     <script>
         const featureItems = document.querySelectorAll('.feature-item');
 
-        function checkVisibility() {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            featureItems.forEach(item => {
-                if (scrollPosition > item.offsetTop + item.offsetHeight / 2) {
-                    item.classList.add('visible');
-                }
-            });
+function checkVisibility() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    featureItems.forEach(item => {
+        if (scrollPosition > item.offsetTop + item.offsetHeight / 2) {
+            item.classList.add('visible');
         }
+    });
+}
 
-        window.addEventListener('scroll', checkVisibility);
-        window.addEventListener('load', checkVisibility);
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
+
     </script>
 </body>
 </html>
