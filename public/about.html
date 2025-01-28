@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - FinAI</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body class="about-page">
@@ -47,30 +47,52 @@
     </section>
 
     <footer>
-        <!-- Left Side: Logo -->
-        <div class="footer-logo">
-            <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
-        </div>
-    
-        <!-- Center: Description Text -->
-        <div class="footer-description">
-            <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
-        </div>
-    
-        <!-- Right Side: Follow Us -->
-        <div class="footer-social">
-            <p>Follow Us:</p>
-            <div class="footer-social-links">
-                <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
-                <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
-                <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
+        <div class="footer-container">
+            <div class="footer-newsletter">
+                <h2>Subscribe to our newsletter</h2>
+                <p>Get tips, technical guides, and best practices. Twice a month. Right in your inbox.</p>
+                <button class="btn-subscribe">Subscribe</button>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#">Developer API</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    
-        <!-- Footer Bottom Text -->
-        <p>&copy; 2025 FinAI. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FinAI. All rights reserved.</p>
+        </div>
     </footer>
-    
 
     <script>
         const aboutContent = document.querySelector('.about-content');

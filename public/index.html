@@ -3,213 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinAI - Your Financial Assistant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>FinAI</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        #dev-notification {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: red;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            z-index: 10000;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            position: fixed;
-            top: 50px;
-            left: 0;
-            width: 100%;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: transparent;
-            z-index: 9999;
-        }
-
-        header .top-icons a.logo {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: color 0.3s;
-        }
-
-        header .top-icons a.logo:hover {
-            color: #ccc;
-        }
-
-        .oval-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            width: 40%;
-            background-color: #000;
-            border-radius: 50px;
-            padding: 0.3rem;
-            animation: dropIn 1s ease-out forwards;
-        }
-
-        .oval-link {
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            padding: 0.4rem 1rem;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-        }
-
-        .oval-link:hover {
-            background-color: #444;
-        }
-
-        .get-started-btn {
-            background-color: black;
-            color: white;
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            border: 2px solid #fff;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background-color 0.3s, transform 0.2s ease;
-            margin-left: 20px;
-        }
-
-        .get-started-btn:hover {
-            background-color: #333;
-            transform: scale(1.05);
-        }
-
-        .get-started-btn:active {
-            background-color: #222;
-            transform: scale(1);
-        }
-
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-    </style>
 </head>
 <body>
-
-    <div id="dev-notification">
-        We are currently under development. Stay tuned for updates!
-    </div>
-
+    <!-- Header Section -->
     <header>
-        <div class="top-icons">
-            <a href="index.html" class="logo">FinAI</a>
+        <div class="top-left">
+            <a href="#" class="logo">FinAI</a>
         </div>
         <div class="oval-container">
             <a href="about.html" class="oval-link">About</a>
             <a href="features.html" class="oval-link">Features</a>
             <a href="community.html" class="oval-link">Community</a>
         </div>
-        <a href="logger.html">
-            <button class="get-started-btn">Get Started</button>
-        </a>
+        <div class="top-right">
+            <a href="logger.html" class="btn-primary">Get Started</a>
+        </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <h1 class="hero-title">Welcome to FinAI</h1>
-        <p class="hero-subtitle">Your AI-powered financial assistant to simplify and optimize financial management.</p>
-        <a href="index.html">
-            <button class="btn-primary">Learn More</button>
-        </a>
+        <p class="hero-subtitle">Empowering businesses with the future of financial AI technology.</p>
     </section>
-
+    
+    <!-- "What We Offer" Section -->
     <section class="features" id="features">
-        <h2>What We Offer</h2>
+        <h1>Our Features</h1>
         <div class="feature-grid">
-            <div class="feature">
-                <h3>💡 Financial Transactions</h3>
-                <p>Easily manage transactions, journal entries, and trial balances with precision.</p>
+            <div class="feature-item">
+                <h2>AI-Driven Financial Forecasting</h2>
+                <p>Accurate financial predictions based on advanced AI models.</p>
             </div>
-            <div class="feature">
-                <h3>📊 Accurate Reports</h3>
-                <p>Generate real-time balance sheets, income statements, and more.</p>
+            <div class="feature-item">
+                <h2>Automated Portfolio Management</h2>
+                <p>Effortlessly manage your investment portfolios with AI.</p>
             </div>
-            <div class="feature">
-                <h3>🛠️ Automation</h3>
-                <p>Save time with automated workflows that improve accuracy and efficiency.</p>
+            <div class="feature-item">
+                <h2>Real-Time Alerts</h2>
+                <p>Stay updated with real-time financial alerts tailored for you.</p>
             </div>
         </div>
     </section>
 
-    <section class="community" id="community">
-        <div class="content">
-            <h2>Join Our Community</h2>
-            <p>Collaborate, share tips, and get support on our official Discord server.</p>
-            <a href="https://discord.gg/KhcfuTtGBd">
-            <button class="btn-secondary">Join Discord</button>
-        </a>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer>
-        <!-- Left Side: Logo -->
-        <div class="footer-logo">
-            <img src="file.png" alt="FinAI Logo" class="footer-logo-img">
-        </div>
-    
-        <!-- Center: Description Text -->
-        <div class="footer-description">
-            <p>FinAI is your AI-powered financial assistant. Our mission is to help individuals and businesses manage finances with ease, transparency, and precision.</p>
-        </div>
-    
-        <!-- Right Side: Follow Us -->
-        <div class="footer-social">
-            <p>Follow Us:</p>
-            <div class="footer-social-links">
-                <a href="#" target="_blank"><img src="x.png" alt="Twitter"></a>
-                <a href="#" target="_blank"><img src="icons8-linkedin-50.png" alt="LinkedIn"></a>
-                <a href="#" target="_blank"><img src="icons8-github-50.png" alt="GitHub"></a>
+        <div class="footer-container">
+            <div class="footer-newsletter">
+                <h2>Subscribe to our newsletter</h2>
+                <p>Get tips, technical guides, and best practices. Twice a month. Right in your inbox.</p>
+                <button class="btn-subscribe">Subscribe</button>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Product</h3>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Platform</h3>
+                    <ul>
+                        <li><a href="#">Developer API</a></li>
+                        <li><a href="terms.html">Education</a></li>
+                        <li><a href="#">Mobile App</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    
-        <!-- Footer Bottom Text -->
-        <p>&copy; 2025 FinAI. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 FinAI. All rights reserved.</p>
+        </div>
     </footer>
-    
 
+    <script src="script.js"></script>
 </body>
 </html>

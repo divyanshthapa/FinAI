@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
-    background: #333;
+    color: #f2f2f2;
+    background: #1a1a1a; /* Dark gray theme */
     box-sizing: border-box;
 }
 
@@ -14,10 +14,6 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-img {
-    max-width: 100%;
 }
 
 h1, h2, h3 {
@@ -31,6 +27,7 @@ p {
 
 section {
     width: 100%;
+    padding: 2rem;
 }
 
 /* Sliding Down Animation */
@@ -141,151 +138,94 @@ header .logo:hover {
 }
 
 .btn-primary:hover {
-    background-color: #444;
+    background-color: transparent;
 }
 
-/* Hero Section */
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
-    height: 100vh;
-    background: url('pexels-thomas-svensson-1505611-3074526.jpg') no-repeat center center fixed;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+/* Community Section */
+.community {
+    margin-top: 6rem; /* Adjust margin to prevent overlap with header */
+    padding: 4rem 2rem; /* Added padding for breathing space */
     text-align: center;
-    z-index: 1;
-}
-
-/* Slide-Up and Fade-Out Animation */
-@keyframes slideUpFadeOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0); /* Initial position */
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-50px); /* Slide up and fade out */
-    }
-}
-
-/* Style for Welcome Text */
-.hero-title {
-    font-size: 4rem;
-    margin-top: 4cm;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
-    font-weight: 700;
-    line-height: 1.2;
-    opacity: 1; /* Initially visible */
-    transform: translateY(0); /* Start at normal position */
-    transition: all 1s ease-out; /* Smooth transition for slide-up */
+    background: url('pinterestdownloader.com-1737943602.535935.gif');
+    background-size: cover; /* Ensure it covers the entire section */
 }
 
 
-
-.hero-subtitle {
-    font-size: 1.4rem;
-    color: #fff;
-    max-width: 800px;
-    margin-bottom: 2rem;
-    animation: slideDown 1.5s ease-out 0.5s forwards;
-}
-
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 4rem 2rem;
-    text-align: center;
-    background: url('ai.png') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    margin-top: -2rem;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
-}
-
-.features h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-/* Feature Grid */
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Feature Items (Transparent with background image visible) */
-.feature-item {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+.community-content {
+    margin: auto;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.05); /* Transparent box with a slight background */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Slight initial offset */
-    animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation */
-    visibility: hidden; /* Hidden until animation starts */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
 }
 
-/* Feature Item Visibility */
-.feature-item.visible {
-    visibility: visible; /* Make visible when class is added */
-}
-
-/* Additional Styles for Feature Items */
-.feature-item h2 {
-    font-size: 1.75rem;
+.community h1 {
+    font-size: 2.5rem;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
-.feature-item p {
+.community p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.community-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
     font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #444;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #222;
+    color: #f2f2f2;
     padding: 3rem 2rem;
-    border-top: 2px solid #444;
     font-size: 1rem;
+    border-top: 1px solid #444;
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .footer-newsletter {
@@ -304,19 +244,19 @@ footer {
 }
 
 .btn-subscribe {
-    background-color: #000000;
-    color: #c5c5c5;
+    background-color: #444;
+    color: #fff;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .btn-subscribe:hover {
-    background-color: #494949;
+    background-color: #555;
 }
 
 .footer-columns {
@@ -329,7 +269,6 @@ footer {
 .footer-column {
     flex: 1;
     min-width: 200px;
-    text-align: left;
 }
 
 .footer-column h3 {
@@ -352,11 +291,11 @@ footer {
     color: #ccc;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .footer-column a:hover {
-    color: #ececec;
+    color: #fff;
 }
 
 .footer-bottom {
@@ -386,56 +325,8 @@ footer {
     .btn-subscribe {
         width: 100%;
     }
-}
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
+    .community-actions {
         flex-direction: column;
-        justify-content: center;
-        padding: 1rem;
-    }
-
-    .oval-container {
-        position: static;
-        transform: none;
-        justify-content: center;
-        margin-top: 1.5rem;
-        width: 100%;
-    }
-
-    .oval-link {
-        margin: 0.5rem;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .features h1 {
-        font-size: 2rem;
-    }
-
-    .feature-item h2 {
-        font-size: 1.5rem;
-    }
-
-    .feature-item p {
-        font-size: 0.9rem;
     }
 }

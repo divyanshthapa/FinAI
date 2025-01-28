@@ -40,3 +40,16 @@ document.getElementById('transactionForm').addEventListener('submit', async (e) 
     alert('Failed to save the transaction.');
   }
 });
+
+// Detect when the feature items are in the viewport and trigger the pop-up animation
+window.addEventListener('scroll', function() {
+  const featureItems = document.querySelectorAll('.feature-item');
+
+  featureItems.forEach(function(item) {
+      const rect = item.getBoundingClientRect();
+
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+          item.classList.add('visible');
+      }
+  });
+});
